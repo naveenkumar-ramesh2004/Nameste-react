@@ -4,8 +4,7 @@ import { faMagnifyingGlass, faUser, faPercent, faShoppingCart,faHeadset } from '
 import '../Style/Header.css';
 import React, { useState } from 'react';
 
-const Header = () => {
-    const [searchText, setSearchText] = useState("");
+const Header = ({ searchText, setSearchText, Filter }) => {
     return(
         <header className="header">
             <div className="Logo">
@@ -13,7 +12,7 @@ const Header = () => {
             </div>
             <div className="searchbar">
                 <input type="text" placeholder="Search for Restarunts and Food" value={searchText} onChange={(e) => {setSearchText(e.target.value)}}/>
-                <button className="search-button"><FontAwesomeIcon icon={faMagnifyingGlass}></FontAwesomeIcon></button>
+                <button className="search-button"><FontAwesomeIcon icon={faMagnifyingGlass} onClick={() => {Filter()}}></FontAwesomeIcon></button>
             </div>
             <nav>
                 <ul>
