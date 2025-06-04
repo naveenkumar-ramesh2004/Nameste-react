@@ -5,14 +5,20 @@ import '../Style/Header.css';
 import React, { useState } from 'react';
 
 const Header = ({ searchText, setSearchText, Filter }) => {
+    
     return(
         <header className="header">
             <div className="Logo">
                 <img src={Logo} alt="Soru Vandi" />
             </div>
             <div className="searchbar">
-                <input type="text" placeholder="Search for Restarunts and Food" value={searchText} onChange={(e) => {setSearchText(e.target.value)}}/>
-                <button className="search-button"><FontAwesomeIcon icon={faMagnifyingGlass} onClick={() => {Filter()}}></FontAwesomeIcon></button>
+                <form action="" onSubmit={(e) => {
+                    e.preventDefault();
+                    Filter();
+                }}>
+                    <input type="text" placeholder="Search for Restarunts and Food" value={searchText} onChange={(e) => {setSearchText(e.target.value)}}/>
+                    <button className="search-button"><FontAwesomeIcon icon={faMagnifyingGlass}></FontAwesomeIcon></button>
+                </form>
             </div>
             <nav>
                 <ul>

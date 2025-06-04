@@ -30,23 +30,29 @@ header > .searchbar {
   left: 50%;
   transform: translate(-50%, -50%);
 }
-header > .searchbar > input {
+header > .searchbar >form{
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+}
+header > .searchbar >form > input {
   width: 95%;
   height: 100%;
   border: none;
   background-color: transparent;
   font-size: 16px;
 }
-header > .searchbar > input:focus {
+header > .searchbar > form > input:focus {
   outline: none;
 }
-header > .searchbar > input::placeholder {
+header > .searchbar > form > input::placeholder {
   color: #cccccc;
 }
-header > .searchbar > input:not(:placeholder-shown) {
+header > .searchbar > form > input:not(:placeholder-shown) {
   color: #3f3d3d;
 }
-header > .searchbar > .search-button {
+header > .searchbar > form > .search-button {
   width: 50px;
   height: 100%;
   background-color: #f0f0f0;
@@ -57,7 +63,7 @@ header > .searchbar > .search-button {
   justify-content: center;
   color: #cccccc;
 }
-header > .searchbar > .search-button:hover {
+header > .searchbar > form > .search-button:hover {
   cursor: pointer;
 }
 header > nav {
