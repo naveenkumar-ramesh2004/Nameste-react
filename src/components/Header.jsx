@@ -17,7 +17,7 @@ const Header = ({ searchText, setSearchText, Filter }) => {
                     Filter();
                 }}>
                     <input type="text" placeholder="Search for Restarunts and Food" value={searchText} onChange={(e) => {setSearchText(e.target.value)}}/>
-                    <button className="search-button"><FontAwesomeIcon icon={faMagnifyingGlass}></FontAwesomeIcon></button>
+                    <button type="submit" className="search-button"><FontAwesomeIcon icon={faMagnifyingGlass}></FontAwesomeIcon></button>
                 </form>
             </div>
             <nav>
