@@ -33,7 +33,7 @@ const App = () => {
     const FilterRestaurant = () => {
     (!searchText) ? setRestaurants(restaurantList) :setRestaurants(
         restaurantList.filter((restaurant) =>
-            restaurant.info.name.toLowerCase().includes(searchText.toLowerCase())
+            restaurant?.info?.name?.toLowerCase().includes(searchText.toLowerCase())
         )
     );
 };

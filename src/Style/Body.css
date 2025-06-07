@@ -13,7 +13,7 @@ main > .restaurant-list{
     justify-content: space-between;
 }
 main > .restaurant-list > .restaurant-card{
-    width: 21%;
+    width: 23%;
     margin-bottom: 20px;
     overflow: hidden;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
